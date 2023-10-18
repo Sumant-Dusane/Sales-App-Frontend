@@ -1,0 +1,25 @@
+.btn {
+    cursor: pointer;
+    border: 0;
+    padding: $spacer;
+}
+
+.btn-primary {
+    color: $white;
+    background: $blue;
+    border-radius: $border-radius-m;
+
+    &:hover {
+        background: darken($color: $blue, $amount: 10);    
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: $blueSubtle;
+    }
+
+    &--small {
+        @extend .btn-primary;
+        padding: $spacer1_2 $spacer;
+    }
+}

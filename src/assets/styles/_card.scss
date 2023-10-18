@@ -1,0 +1,20 @@
+.card {
+    @include flex(column, center,  center);
+    width: 100%;
+    padding: $spacer2x $spacer;
+    border-radius: $border-radius-m;
+    background-color: $white;
+    text-align: center;
+    min-height: 200px;
+
+    &__icon {
+        color: $blue;
+        font-size: $font-size-l;
+    }
+
+    &__title {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-500;
+        margin: 0 $spacer;
+    }
+}

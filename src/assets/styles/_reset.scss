@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-smooth: antialiased;
+    text-rendering: geometricPrecision;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    color: $dark;
+    background-color: $body-bg;
+}
+
+button, a, input  {
+    transition: $transition-in-out-base;
+}
+
+a {
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+        color: $blue;
+    }
+}
+
+::placeholder {
+    color: $dark;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

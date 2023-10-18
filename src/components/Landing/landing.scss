@@ -1,0 +1,60 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/flex";
+@import "../../assets/styles/grid";
+@import "../../assets/styles/animation";
+
+.landing {
+    .navbar {
+        @include flex(row, center, space-between);
+        background-color: $white;
+        padding: $spacer $spacer2x;
+
+        &__logo {
+            color: $blue
+        }
+        &__navs {
+            @include flex(row, center, center);
+            gap: $spacer;
+
+            .btn a {
+                color: $white;
+            }
+        }
+    }
+    .hero {
+        @include flex(row, center, space-between);
+        background-color: $white;
+        padding: $spacer2x $spacer4x;
+        height: 80vh;
+
+        &__left {
+            &__title {
+                font-size: $font-size-l;
+                animation: slideInDown 800ms ease-in-out;
+            }
+            &__subtitle {
+                animation: slideInDown 1200ms ease-in-out;
+            }
+            &__desc {
+                animation: slideInDown 1600ms ease-in-out;
+            }
+        }
+        &__right {
+            border: 1px solid $gray;
+            border-radius: $border-radius-m;
+            max-width: 40%;
+            box-shadow: $box-shadow-large;
+        }
+    }
+
+    .features {
+        @include grid(repeat(2, 1fr), auto, auto);
+        gap: $spacer2x;
+        padding: $spacer2x $spacer4x;
+    }
+
+    .cta {
+        text-align: center;
+        padding: $spacer 0;
+    }
+}
