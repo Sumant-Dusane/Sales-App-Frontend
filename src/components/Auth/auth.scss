@@ -1,0 +1,47 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/flex";
+@import "../../assets/styles/sudo";
+
+.auth {
+    position: relative;
+    height: 100vh;
+    &__tab {
+        @include element-position(absolute, 15%, 0, unset, 0);
+        align-items: start;
+        text-align: start;
+        width: max-content;
+        margin: 0 auto;
+        transform: translateX(-100vw);
+        transition: $transition-in-out-base;
+
+        label {
+            margin-left: $spacer1_4;
+            margin-top: $spacer2x;
+        }
+
+        input {
+            border-radius: $border-radius-sm;
+            padding: $spacer1_2;
+            min-width: 500px;
+        }
+
+        .btn-primary {
+            padding: $spacer $spacer1_2;
+            border-radius: $border-radius-m;
+            margin-top: $spacer2x;
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    &::before {
+        @include sudo-fill(absolute, 8%, 0, unset, 30%);
+        height: 200px;
+        width: 200px;
+        border-radius: $border-radius-rounded;
+        background: linear-gradient(25deg, $blueSubtle, $blue);
+        animation: float 2000ms infinite reverse cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}

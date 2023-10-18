@@ -1,19 +1,13 @@
 import React from 'react';
 import productImage from "./../../assets/images/product-image.jpeg";
 import "./landing.scss";
+import Navbar from '../Navbar/Navbar';
 
 export default function Landing() {
     return (
+        <>
+        <Navbar />
         <div className='landing'>
-            <div className="navbar">
-                <a href="#home"><h2 className='navbar__logo'>AVALAUNCH.ai</h2></a>
-                <ul className="navbar__navs">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#dashboard">Dashboard</a></li>
-                    <li className='btn btn-primary--small'><a href="#dashboard">Login</a></li>
-                </ul>
-            </div>
             <div className="hero" id='hero'>
                 <div className="hero__left">
                     <h1 className='hero__left__title'>AVALAUNCH.ai</h1>
@@ -46,5 +40,6 @@ export default function Landing() {
             </div>
             <div className="landing__clients"></div>
         </div>
+        </>
     )
 }

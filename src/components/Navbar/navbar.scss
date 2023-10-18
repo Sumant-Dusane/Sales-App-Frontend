@@ -1,0 +1,20 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/flex";
+
+.navbar {
+    @include flex(row, center, space-between);
+    background-color: $white;
+    padding: $spacer $spacer2x;
+
+    &__logo {
+        color: $blue
+    }
+    &__navs {
+        @include flex(row, center, center);
+        gap: $spacer;
+
+        .btn a {
+            color: $white;
+        }
+    }
+}

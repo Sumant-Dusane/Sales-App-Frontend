@@ -23,3 +23,12 @@
         padding: $spacer1_2 $spacer;
     }
 }
+
+.btn-link {
+    background: transparent;
+    padding: $spacer1_4;
+
+    &:hover {
+        color: $blue;
+    }
+}
