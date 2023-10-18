@@ -19,7 +19,7 @@ $blueDark      :       #4865A9;
 
 // Font Sizes
 $font-size-base     : 1rem;                                 //16px
-$font-size-default  : 1rem;                                 //14px
+$font-size-default  : $font-size-base * 0.875;              //14px
 $font-size-xl       : $font-size-base * 4;                  //64px
 $font-size-l        : $font-size-base * 3;                  //48px
 $font-size-m        : $font-size-base * 2;                  //32px
