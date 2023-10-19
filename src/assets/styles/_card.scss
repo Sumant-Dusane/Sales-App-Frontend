@@ -1,7 +1,7 @@
 .card {
     @include flex(column, center,  center);
     width: 100%;
-    padding: $spacer2x $spacer;
+    padding: $spacer;
     border-radius: $border-radius-m;
     background-color: $white;
     text-align: center;
@@ -16,5 +16,9 @@
         font-size: $font-size-sm;
         font-weight: $font-weight-500;
         margin: 0 $spacer;
+    }
+
+    @media screen and (min-width: 769px) {
+        padding: $spacer2x $spacer;
     }
 }

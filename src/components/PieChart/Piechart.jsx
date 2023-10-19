@@ -15,7 +15,7 @@ export default function Piechart() {
                         position: 'left',
                         elements: {
                             arc: {
-                                borderWidth: 10
+                                borderWidth: 10,
                             }
                         },
                         labels: {
@@ -28,12 +28,12 @@ export default function Piechart() {
                 },
                 data: {
                     labels: [
-                        "First",
-                        "Second",
-                        "Third",
+                        "Amazon",
+                        "Flipkart",
+                        "Mytra",
                     ],
                     datasets: [{
-                        data: [250, 100, 100, 200],
+                        data: [250, 100, 100],
                         borderWidth: 0,
                         backgroundColor: [
                             '#074EFD',
@@ -44,7 +44,7 @@ export default function Piechart() {
                             '#074EFD',
                             '#FFD700',
                             "#B3D0FD",
-                        ]
+                        ],
                     }]
                 }
             });

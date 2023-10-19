@@ -2,19 +2,35 @@
 @import "./../../assets/styles/flex";
 
 .navbar {
-    @include flex(row, center, space-between);
+    position: relative;
+    @include flex(column, center, space-between);
     background-color: $white;
     padding: $spacer $spacer2x;
+    z-index: 2;
+    transform: translateY(-100%);
+    transition: $transition-in-out-base;
+    box-shadow: $box-shadow-large;
+
+    &.show {
+        transform: translateY(0);
+    }
 
     &__logo {
         color: $blue
     }
     &__navs {
         @include flex(row, center, center);
-        gap: $spacer;
+        font-weight: $font-weight-500;
+        gap: $spacer2x;
 
         .btn a {
             color: $white;
         }
+    }
+
+    @media screen and (min-width: 769px){
+        flex-direction: row;
+        transform: translateY(0);
+        box-shadow: 0;
     }
 }

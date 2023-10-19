@@ -6,21 +6,29 @@
     position: relative;
 
     &__content {
-        margin-left: 16vw;
-        padding: $spacer2x $spacer3x;
-
+        padding: $spacer;
         &__header {
-            @include flex(row, center, space-between);
+            @include flex(column, center, space-between);
+            margin-top: $spacer2x;
+            text-align: center;
+            gap: $spacer;
+            .h2 {
+                @include flex(row, center, flex-start);
+
+                .btn {
+                    font-size: $font-size-s;
+                    padding-left: 0;
+                }
+            }
             span {
                 color: $gray;
             }
-
             input {
                 border: 0;
                 background-color: $white;
                 padding: $spacer;
                 border-radius: $border-radius-m;
-                min-width: 450px;
+                width: 100%;
 
                 &::placeholder {
                     color: $gray;
@@ -30,9 +38,9 @@
         }
 
         &__main {
-            @include grid(repeat(2, 1fr), max-content 1fr, "sales expense" "chart chart");
+            @include flex(column, center, center);
             padding: $spacer2x 0;
-            gap: $spacer3x;
+            gap: $spacer;
             .card {
                 @include grid(.25fr 1fr, .25fr 1fr .25fr, "icon title" "icon sales" "icon subtitle");
                 justify-items: start;
@@ -78,6 +86,29 @@
                 background-color: $white;
                 border-radius: $border-radius-m;
                 grid-area: chart;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        margin-left: 16vw;
+        padding: $spacer2x $spacer3x;
+
+        &__content {
+            &__header {
+                flex-direction: row;
+                margin-top: 0;
+                text-align: start;
+                gap: 0;
+                input {
+                    min-width: 450px;
+                    width: max-content
+                }
+            }
+            &__main {
+                @include grid(repeat(2, 1fr), max-content 1fr, "sales expense" "chart chart");
+                gap: $spacer3x;
             }
         }
     }

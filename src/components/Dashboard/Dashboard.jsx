@@ -4,13 +4,16 @@ import Sidebar from '../Sidebar/Sidebar'
 import Barchart from '../BarChart/Barchart';
 
 export default function Dashboard() {
+  function goBack() {
+    window.history.back();
+  }
   return (
     <div className='dashboard'>
       <Sidebar />
       <div className="dashboard__content">
         <div className="dashboard__content__header">
           <div>
-            <div className="h2"><strong>Dashboard 💰</strong></div>
+            <div className="h2"><button className='btn' onClick={() => goBack()}><i className="fas fa-arrow-left"/></button><strong>Dashboard 💰</strong></div>
             <span>Morning Sumant, Welcome to AvaLaunch Dashboard</span>
           </div>
           <input type="text" name="" id="" placeholder='Search Here' />
@@ -29,7 +32,7 @@ export default function Dashboard() {
             <span>Over Last Month ₹95,123</span>
           </div>
           <div className='chart'>
-            <div className="h1">Sales Report </div>
+            <div className="h2">Sales Report </div>
             <Barchart />
           </div>  
         </div>

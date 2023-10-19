@@ -17,13 +17,9 @@ export default function Barchart() {
                     }
                 },
                 data: {
-                    labels: [
-                        "First",
-                        "Second",
-                        "Third"
-                    ],
+                    labels: ['Electroics', 'Fashion', 'Hardware'],
                     datasets: [{
-                        label: 'Sales Report',
+                        label: 'Sales',
                         data: [250, 100, 100, 200],
                         backgroundColor: [
                             '#074EFD',
@@ -35,7 +31,9 @@ export default function Barchart() {
                             '#FFD700',
                             "#B3D0FD",
                         ],
-                        borderWidth: 1
+                        borderWidth: 1,
+                        maxBarThickness: 35,
+                        borderRadius: 12
                     }]
                 }
             })
