@@ -1,12 +1,15 @@
-import './App.scss';
-import Router from './Router';
-import Landing from './components/Landing/Landing';
+import "./App.scss";
+import Router from "./Router";
+import Landing from "./components/Landing/Landing";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <Router />
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <Router />
+      </div>
+    </ChakraProvider>
   );
 }
 
