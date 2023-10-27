@@ -43,10 +43,11 @@ function Analytics() {
         arrayOfObj.forEach((ele) => {
           let obj = Object.values(ele);
           console.log(obj[0].start, obj[0].end);
-          if (obj[0].end != -1) refinedArray.push(obj.end);
+          if (obj[0].end != -1) refinedArray.push(obj[0].end);
           else refinedArray.push(0);
         });
         setData(refinedArray);
+        console.log(refinedArray);
       })
       .catch((err) => {
         console.log(err);
@@ -70,7 +71,7 @@ function Analytics() {
       },
       title: {
         display: true,
-        text: "Chart.js Bar Chart",
+        text: "Month wise predictions",
       },
     },
   };
@@ -162,7 +163,7 @@ function Analytics() {
               options={option}
               data={{
                 labels,
-                datasets: data,
+                datasets: [{ label: "Sales in Dollars", data: data }],
               }}
             />
           </div>
